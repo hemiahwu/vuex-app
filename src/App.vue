@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "app",
   components: {},
@@ -17,6 +18,13 @@ export default {
       return this.$store.state.todos;
     }
   }
+  // 写法2
+  // computed: mapState({
+  //   count: state => state.count,
+  //   todos: state => state.todos
+  // })
+  // 写法3
+  // computed: mapState(["count", "todos"])
 };
 </script>
 
