@@ -26,6 +26,14 @@ export default new Vuex.Store({
       return state.todos.find(todo => todo.id === id);
     }
   },
-  mutations: {},
+  mutations: {
+    incrementCount(state) {
+      state.count++;
+    },
+    decrementCount(state, n) {
+      // state.count -= n;
+      state.count -= n.amout;
+    }
+  },
   actions: {}
 });
